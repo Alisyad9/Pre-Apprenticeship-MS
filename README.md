@@ -1,4 +1,3 @@
 # Pre-Apprenticeship-MS
-Founders And Coders   project for pre-apprenticeship
 
-hello yes
+Founders And Coders project for pre-apprenticeship
