@@ -11,7 +11,7 @@ A collection of my pre apprenticeship projects
 - [x] Git
 - [x] Node
 - [x] npm
-- [x] iTerm2
+- [ ] iTerm2
 - [x] VS Code
 - [x] Chrome/Edge/Firefox
 
@@ -38,12 +38,12 @@ A collection of my pre apprenticeship projects
 
 - [x] Sign up for [JavaScript 30](https://javascript30.com/) and work on the first two projects:
 
-- [x] JavaScript Drum Kit
-- [x] CSS + JS Clock
+- [ ] JavaScript Drum Kit
+- [ ] CSS + JS Clock
 
 _Focus on using Semantic HTML, ensuring the sites have 100% in a Lighthouse Accessibility audit, and manually testing the accessibility._
 
-- [x] Add the websites into your project collection as well as some notes on what you’ve learnt while building them.
+- [ ] Add the websites into your project collection as well as some notes on what you’ve learnt while building them.
 
 ### Git/GitHub
 
