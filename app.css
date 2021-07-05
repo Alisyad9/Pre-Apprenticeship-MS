@@ -69,6 +69,7 @@
 body {
   font-family: system-ui, sans-serif;
   background-image: url(./images/yifei-wong-qoMZt8_s5NA-unsplash.jpg);
+  background-size: auto;
 }
 
 a {
