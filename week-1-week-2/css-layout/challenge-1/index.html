@@ -22,27 +22,42 @@
         font-family: system-ui, sans-serif;
       }
       header {
-        padding: 1.5rem;
+        padding: 4rem 1.5rem;
         background-color: black;
         color: white;
       }
+
       main {
         padding: 1.5rem;
+      }
+      /*   a      */
+      .center {
+        max-width: 40rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .width_larg {
+        max-width: 60rem;
+      }
+      .width_small {
+        max-width: 20rem;
       }
     </style>
   </head>
   <body>
     <header>
-      <h1>Welcome to my site</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
-        itaque voluptatibus magnam perspiciatis, accusantium atque alias
-        cupiditate provident nemo quo placeat incidunt commodi ea aperiam
-        voluptatum corporis soluta impedit eaque.
-      </p>
+      <div class="center width_large">
+        <h1>Welcome to my site</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
+          itaque voluptatibus magnam perspiciatis, accusantium atque alias
+          cupiditate provident nemo quo placeat incidunt commodi ea aperiam
+          voluptatum corporis soluta impedit eaque.
+        </p>
+      </div>
     </header>
     <main>
-      <section>
+      <section class="center">
         <h2>The first section</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
@@ -52,7 +67,7 @@
         </p>
       </section>
 
-      <section>
+      <section class="center width_small">
         <h2>Contact me</h2>
         <form>
           <div>

@@ -30,13 +30,23 @@
         background-color: black;
         color: white;
       }
+      /* /////////////////////// */
+      .mainSectionRow {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1rem;
+      }
+      .displayFlex {
+        justify-content: space-between;
+      }
     </style>
   </head>
   <body>
-    <header>
+    <header class="mainSectionRow displayFlex">
       <a href="/" aria-label="Home">🐹</a>
       <nav>
-        <ul>
+        <ul class="mainSectionRow">
           <li><a href="#about">About</a></li>
           <li><a href="#work">Work</a></li>
           <li><a href="#blog">Blog</a></li>
