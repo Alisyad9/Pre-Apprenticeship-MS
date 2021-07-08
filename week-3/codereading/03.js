@@ -1,6 +1,6 @@
 function transform(arg1) {
     for (let i = 0; i < arg1.length; i++) {
-        arg1[i] += 1
+        arg1[i] += 1 //mutating the array no need for return of the array. 
     }
 }
 
