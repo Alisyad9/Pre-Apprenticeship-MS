@@ -4,9 +4,29 @@
 3. Remove the class of "highlight" if already present
 e.g. "<p class="para">Hello</p>" -> "<p class="para highlight">Hello</p>"
 */
+
+// const toggle_button= document.querySelector('toggle-highlight input[type="checkbox"]')
 function toggleHighlight() {
-  // your code here
+    const paragraph = document.querySelectorAll('p')[1];
+  
+      paragraph.classList.toggle("highlight");
+      
+  
+  
+  // {
+  //   document.documentElement.classList.add("highlight");
+  //   console.log("add");
+  // } else {
+  //   document.documentElement.classList.remove("highlight");
+  //   console.log('remove');
+  // }
 }
+  
+
+
+
+
+
 
 /* CHALLENGE 2
 1. Take an array of strings as a parameter
@@ -17,7 +37,22 @@ e.g. generateList(["hello", "world"]) -> <ul>
                                           </ul>
 */
 function generateList(array) {
-  // your code here
+  console.log('it works');
+  // let newArray = array.map(element=> element); 
+
+  // console.log(newArray);
+  const list = document.createElement("ul");
+  array.map(element=> {
+    if (element.length<10) {
+      const listLi = document.createElement("li");
+    listLi.append(element);
+    list.append(listLi);
+    }
+    
+  })
+
+  return list;
+
 }
 
 /* CHALLENGE 3a

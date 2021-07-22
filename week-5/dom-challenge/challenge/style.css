@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+ul {
+  text-align: center;
+  list-style-type: none;
+}
+
 body {
   max-width: 40rem;
   margin: 0 auto;
