@@ -42,12 +42,12 @@ function generateList(array) {
 
   // console.log(newArray);
   const list = document.createElement("ul");
-  // array.map(element=> {
-  //   if (element.length<10) {
-  //     const listLi = document.createElement("li");
-  //   listLi.append(element);
-  //   list.append(listLi);
-  //   }
+  array.map(element=> {
+    if (element.length<10) {
+      const listLi = document.createElement("li");
+    listLi.append(element);
+    list.append(listLi);
+    }
     
   })
 
