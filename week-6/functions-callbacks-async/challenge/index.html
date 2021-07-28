@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge | Functions and asynchronous JavaScript</title>
+  </head>
+  <body>
+    <h1>Open the console</h1>
+    <script>
+      let setnumber = 1000;
+
+      function light(newString, callback) {
+        setTimeout(() => {
+          callback(newString);
+        }, setnumber);
+        setnumber += 1000;
+      }
+
+      light("green", (x) => console.log(x));
+      light("amber", (x) => console.log(x));
+      light("red", (x) => console.log(x));
+      light("green", (x) => console.log(x));
+      light("amber", (x) => console.log(x));
+      light("finished", (x) => console.log(x));
+    </script>
+  </body>
+</html>
