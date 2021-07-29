@@ -7,7 +7,23 @@
   </head>
   <body>
     <h1>Open the console</h1>
+
     <script>
+      Workshop;
+      // Let’s use callbacks to make some traffic lights. Download the starter files using the command at the top of this workshop. Open challenge/index.html in your editor.
+
+      // Inside the script tag write a function light that takes two arguments: a string and a callback
+      // It should wait 1 second, log the string and then call its callback argument
+      // Use light to log each colour of a traffic light sequence, in order, followed by "finished"
+      // e.g. It should log:
+      // green
+      // amber
+      // red
+      // amber
+      // green
+      // finished
+      // with a 1 second pause before each colour
+
       let setnumber = 1000;
 
       function light(newString, callback) {
@@ -19,10 +35,10 @@
 
       light("green", (x) => console.log(x));
       light("amber", (x) => console.log(x));
-      light("red", (x) => console.log(x));
-      light("green", (x) => console.log(x));
-      light("amber", (x) => console.log(x));
-      light("finished", (x) => console.log(x));
+      // light("red", (x) => console.log(x));
+      // light("green", (x) => console.log(x));
+      // light("amber", (x) => console.log(x));
+      // light("finished", (x) => console.log(x));
     </script>
   </body>
 </html>
