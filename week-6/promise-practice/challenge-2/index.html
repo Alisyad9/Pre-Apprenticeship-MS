@@ -9,6 +9,28 @@
     <h1>Open the console</h1>
     <script>
       // write your code here
+      ////step 1
+      function getPokimon() {
+        return fetch(
+          "https://pokeapi.co/api/v2/pokemon/pikachu"
+        ).then((response) => response.json());
+      }
+
+      /////////////species
+      function getSpecies(userUrl) {
+        return fetch(userUrl.species.url).then((response) => response.json());
+      }
+
+      function getShape(userUrl) {
+        return fetch(userUrl.shape.url).then((response) => response.json());
+      }
+
+      // getPokimon().then((data) => console.log(data));
+
+      getPokimon().then(getSpecies).then(getShape).then(console.log);
+      // getSpecies().then((data) => console.log(data));
+
+      // getPokimon().then(getSpecies).then(console.log);
     </script>
   </body>
 </html>
