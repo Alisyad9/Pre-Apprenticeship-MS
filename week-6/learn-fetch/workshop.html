@@ -58,12 +58,12 @@
       getUser("Alisyad9").then(get_repos).then(console.log);
 
       ////////////taske 3
-      // let promise1 = getUser("oliverjam");
-      // let promise2 = getUser("Alisyad9");
+      let promise1 = getUser("oliverjam");
+      let promise2 = getUser("Alisyad9");
 
-      // Promise.all([promise1, promise2]).then((values) => {
-      //   console.log(values);
-      // });
+      Promise.all([promise1, promise2]).then((values) => {
+        console.log(values);
+      });
 
       // Promise.all([promise1, promise2]).then((values) => console.log(values));
 
