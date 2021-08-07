@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real world fetch</title>
+  </head>
+  <body>
+    <form>
+      <label for="fname">First name:</label><br />
+
+      <input id="fname" /><br />
+
+      <label for="lname">email</label><br />
+
+      <input type="email" id="email" /><br /><br />
+      <button type="submit">Log in</button>
+    </form>
+    <!-- <form>
+      <label for="name">Name</label>
+      <input id="name" />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" />
+
+      <button type="submit">Log in</button>
+    </form> -->
+
+    <script>
+      // fetch("https://echo.oliverjam.workers.dev/status/404")
+      //   .then(console.log)
+      //   .catch(console.error);
+
+      // fetch("https://echo.oliverjam.workers.dev/status/404",)
+      //   .then((response) => {
+      //     if (!response.ok) {
+      //       throw new Error(response.status);
+      //     }
+      //     console.log(response)
+      //     // return response.blob();
+      //   })
+      //   .catch(console.error);
+
+      // const data = { name: "oli" };
+      const myForm = document.querySelector("form");
+      myForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const name = document.querySelector("#fname").value;
+        const password = document.querySelector("#email").value;
+        const data = { name, email };
+
+        fetch("https://echo.oliverjam.workers.dev/json", {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: { "content-type": "application/json" },
+        })
+          .then((response) => {
+            if (!response.ok) throw new Error(response.status);
+
+            return response.json();
+            // return response.blob();
+          })
+          .then((json) => console.log(json))
+          .catch((error) => console.error(error));
+      });
+
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+    </script>
+  </body>
+</html>
