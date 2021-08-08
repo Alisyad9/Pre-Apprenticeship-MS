@@ -7,14 +7,15 @@
   </head>
   <body>
     <form>
-      <label for="fname">First name:</label><br />
+      <h1>Pokemon search</h1>
+      <label for="searchLabel">search:</label><br />
 
-      <input id="fname" /><br />
+      <input id="search" /><br />
 
-      <label for="lname">email</label><br />
-
-      <input type="email" id="email" /><br /><br />
-      <button type="submit">Log in</button>
+      <!-- <label for="lname">email</label><br /> -->
+      <!-- 
+      <input type="email" id="email" /><br /><br /> -->
+      <button type="submit">submit</button>
     </form>
     <!-- <form>
       <label for="name">Name</label>
@@ -45,7 +46,7 @@
       // const myForm = document.querySelector("form");
       // myForm.addEventListener("submit", (event) => {
       //   event.preventDefault();
-      //   const name = document.querySelector("#fname").value;
+      //   const name = document.querySelector("#search").value;
       //   const password = document.querySelector("#email").value;
       //   const data = { name, email };
 
@@ -87,6 +88,32 @@
 
       //       Workshop
       // We’re going to make a Pokémon search page using the PokéAPI.
+
+      const myForm = document.querySelector("form");
+      myForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const name = document.querySelector("#search").value;
+
+        function getPokimon(name) {
+          fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
+            .then((response) => {
+              if (!response.ok) throw new Error(response.status);
+
+              return response.json();
+              // return response.blob();
+            })
+            .then((json) => console.log(json))
+            .then((data) => {
+              console.log(data);
+            })
+            .catch((error) => console.error(error));
+        }
+      });
+
+      // getPokimon workshop
+
+      // getPokimon("pikachu");
+      // getPokimon("hitmonlee");
     </script>
   </body>
 </html>
