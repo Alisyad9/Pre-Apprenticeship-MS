@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Real world fetch</title>
   </head>
-  <body>
+  <!-- <body>
     <form>
       <h1>Pokemon search</h1>
       <label for="searchLabel">search:</label><br />
 
       <input id="search" /><br />
 
-      <!-- <label for="lname">email</label><br /> -->
-      <!-- 
+      <label for="lname">email</label><br />
+  
       <input type="email" id="email" /><br /><br /> -->
-      <button type="submit">submit</button>
-    </form>
-    <!-- <form>
+  <!-- <button type="submit">submit</button>
+    </form> -->
+  <!-- <form>
       <label for="name">Name</label>
       <input id="name" />
 
@@ -27,93 +27,104 @@
       <button type="submit">Log in</button>
     </form> -->
 
+  <!-- <script> -->
+  <!-- // fetch("https://echo.oliverjam.workers.dev/status/404") //
+  .then(console.log) // .catch(console.error); //
+  fetch("https://echo.oliverjam.workers.dev/status/404",) // .then((response) =>
+  { // if (!response.ok) { // throw new Error(response.status); // } //
+  console.log(response) // // return response.blob(); // }) //
+  .catch(console.error); // // const data = { name: "oli" }; // const myForm =
+  document.querySelector("form"); // myForm.addEventListener("submit", (event)
+  => { // event.preventDefault(); // const name =
+  document.querySelector("#search").value; // const password =
+  document.querySelector("#email").value; // const data = { name, email }; //
+  fetch("https://echo.oliverjam.workers.dev/json", { // method: "POST", // body:
+  JSON.stringify(data), // headers: { "content-type": "application/json" }, //
+  // }) // // .then((response) => { // // if (!response.ok) throw new
+  Error(response.status); // // return response.json(); // // // return
+  response.blob(); // // }) // // .then((json) => console.log(json)) // //
+  .catch((error) => console.error(error)); // // }); // // const myForm =
+  document.querySelector("form"); // // myForm.addEventListener("submit",
+  (event) => { // // event.preventDefault(); // // const formData = new
+  FormData(myForm); // // const data = Object.fromEntries(formData); // //
+  fetch("https://echo.oliverjam.workers.dev/json", { // // method: "POST", // //
+  body: JSON.stringify(data), // // headers: { "content-type":
+  "application/json" }, // // }) // // .then((response) => { // // if
+  (!response.ok) throw new Error(response.status); // // return response.json();
+  // // // return response.blob(); // // }) // // .then((json) =>
+  console.log(json)) // // .catch((error) => console.error(error)); // // }); //
+  // Workshop // // We’re going to make a Pokémon search page using the PokéAPI.
+  // const myForm = document.querySelector("form"); //
+  myForm.addEventListener("submit", (event) => { // event.preventDefault(); //
+  const name = document.querySelector("#search").value; // function
+  getPokimon(name) { // fetch(`https://pokeapi.co/api/v2/pokemon/${name}`) //
+  .then((response) => { // if (!response.ok) throw new Error(response.status);
+  // return response.json(); // // return response.blob(); // }) // .then((json)
+  => console.log(json)) // .then((data) => { // console.log(data); // }) //
+  .catch((error) => console.error(error)); // } // }); // // getPokimon workshop
+  // // getPokimon("pikachu"); // // getPokimon("hitmonlee");
+  //   </script> -->
+  <!-- // </body>
+  -->
+
+  <body>
+    <form>
+      <h1>Pokemon Search</h1>
+      <label for="pokemon">Pokemon name</label>
+      <input id="pokemon" name="pokemon" type="search" required />
+      <button type="submit">Search</button>
+      <button id="img-button">Generate</button>
+      <img id="img-placeholder" />
+      <output></output>
+    </form>
+
     <script>
-      // fetch("https://echo.oliverjam.workers.dev/status/404")
-      //   .then(console.log)
-      //   .catch(console.error);
+      const imgFrame = document.querySelector("#img-frame");
+      const imgPlholder = document.querySelector("#img-placeholder");
+      const imgButton = document.querySelector("#img-button");
 
-      // fetch("https://echo.oliverjam.workers.dev/status/404",)
-      //   .then((response) => {
-      //     if (!response.ok) {
-      //       throw new Error(response.status);
-      //     }
-      //     console.log(response)
-      //     // return response.blob();
-      //   })
-      //   .catch(console.error);
-
-      // // const data = { name: "oli" };
-      // const myForm = document.querySelector("form");
-      // myForm.addEventListener("submit", (event) => {
-      //   event.preventDefault();
-      //   const name = document.querySelector("#search").value;
-      //   const password = document.querySelector("#email").value;
-      //   const data = { name, email };
-
-      //   fetch("https://echo.oliverjam.workers.dev/json", {
-      //     method: "POST",
-      //     body: JSON.stringify(data),
-      //     headers: { "content-type": "application/json" },
-      //   })
-      //     .then((response) => {
-      //       if (!response.ok) throw new Error(response.status);
-
-      //       return response.json();
-      //       // return response.blob();
-      //     })
-      //     .then((json) => console.log(json))
-      //     .catch((error) => console.error(error));
-      // });
-
-      // const myForm = document.querySelector("form");
-
-      // myForm.addEventListener("submit", (event) => {
-      //   event.preventDefault();
-      //   const formData = new FormData(myForm);
-      //   const data = Object.fromEntries(formData);
-      //   fetch("https://echo.oliverjam.workers.dev/json", {
-      //     method: "POST",
-      //     body: JSON.stringify(data),
-      //     headers: { "content-type": "application/json" },
-      //   })
-      //     .then((response) => {
-      //       if (!response.ok) throw new Error(response.status);
-
-      //       return response.json();
-      //       // return response.blob();
-      //     })
-      //     .then((json) => console.log(json))
-      //     .catch((error) => console.error(error));
-      // });
-
-      //       Workshop
-      // We’re going to make a Pokémon search page using the PokéAPI.
-
-      const myForm = document.querySelector("form");
-      myForm.addEventListener("submit", (event) => {
-        event.preventDefault();
-        const name = document.querySelector("#search").value;
-
-        function getPokimon(name) {
-          fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
-            .then((response) => {
-              if (!response.ok) throw new Error(response.status);
-
-              return response.json();
-              // return response.blob();
-            })
-            .then((json) => console.log(json))
-            .then((data) => {
-              console.log(data);
-            })
-            .catch((error) => console.error(error));
-        }
+      imgButton.addEventListener("click", () => {
+        fetch("https://picsum.photos/200").then((response) => {
+          console.log(response.url);
+          imgPlholder.src = response.url;
+        });
       });
+      // const form = document.querySelector("form");
+      // const output = document.querySelector("output");
 
-      // getPokimon workshop
+      // form.addEventListener("submit", (event) => {
+      //   // stop the form submitting and reloading the page
+      //   event.preventDefault();
 
-      // getPokimon("pikachu");
-      // getPokimon("hitmonlee");
+      //   // clear out any previous results
+      //   output.innerHTML = "";
+
+      //   // get the value of the field with name="pokemon"
+      //   const formData = new FormData(form);
+      //   const name = formData.get("pokemon");
+
+      //   // request that pokemon from PokeAPI
+      //   fetch(`https://source.unsplash.com/weekly?${name}`)
+      //     .then((response) => {
+      //       if (!response.ok) throw new Error(response.status);
+      //       return response.json();
+      //     })
+      //     // if we get a successful response
+      //     .then((response) => {
+      //       console.log(response.url);
+      //       imgPlholder.src = response.url;
+      //     })
+      //     // if the request is unsuccessful
+      //     .catch((error) => {
+      //       console.log(error);
+      //       if (error.message === "404") {
+      //         output.textContent = `⚠️ Couldn't find "${name}"`;
+      //       } else {
+      //         output.textContent = "⚠️ Something went wrong";
+      //       }
+      //     });
+
+      // });
     </script>
   </body>
 </html>
