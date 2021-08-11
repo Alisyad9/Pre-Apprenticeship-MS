@@ -5,7 +5,12 @@
 /* ALTER BELOW THIS LINE */
 
 /* add/edit your style declarations here */
-
+.ports {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 300px auto;
+  grid-gap: 1rem;
+}
 .posts__two {
   background-image: url(https://css-tricks.com/wp-content/uploads/2018/12/guide-flexbox.png);
   background-size: cover;
