@@ -1,24 +1,20 @@
-/* Declare CSS custom properties (aka CSS variables) to define
-the colour values used on this webpage. You should include a
-primary colour, a secondary colour, a font colour, and a 
-background colour 
-*/
-
-/* EDIT CODE BELOW THIS LINE! */
-
 :root {
-  /* variables go here */
+  /* Colours */
+  --primary-colour: hsl(242, 79%, 53%);
+  --secondary-colour: hsl(224, 27%, 45%);
+  --font-colour: hsl(0, 0%, 26%);
+  --bg-colour: hsl(46, 100%, 89%);
 }
-
-/* Stretch challenge */
 
 .dark {
-  
-
-  
+  /* Dark mode colours */
+  --primary-colour: hsl(242, 79%, 77%);
+  --secondary-colour: hsl(224, 20%, 59%);
+  --font-colour: hsl(240, 100%, 94%);
+  --bg-colour: hsl(240, 25%, 12%);
 }
 
-/* DO NOT EDIT CODE BELOW THIS LINE! */
+/* Then, we can reference these variables in our stylesheets, like so: */
 
 img {
   max-width: 700px;
@@ -54,7 +50,7 @@ section {
   padding: 1.5em;
 }
 
-/*Toggle switch styling*/
+/*Toggle switch styling - do not edit*/
 
 .theme-switch-wrapper {
   display: flex;

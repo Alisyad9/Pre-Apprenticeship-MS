@@ -20,14 +20,14 @@
       content="Using CSS variables to implement dark mode on a website."
     />
   </head>
-  <body class="dark">
+  <body>
     <nav>
       <div class="theme-switch-wrapper">
         <label class="theme-switch" for="checkbox">
           <input type="checkbox" id="checkbox" />
           <div class="slider round"></div>
         </label>
-        <em>Toggle Dark Mode!</em>
+        <em>Enable Dark Mode!</em>
       </div>
     </nav>
     <section>
@@ -67,11 +67,9 @@
 
       function switchTheme(e) {
         if (e.target.checked) {
-          // Write some code that will switch the colour
-          // variable values to create a dark mode
+          document.documentElement.classList.add("dark");
         } else {
-          // Write some code that will revert the colour
-          // variables back to their original values
+          document.documentElement.classList.remove("dark");
         }
       }
 
