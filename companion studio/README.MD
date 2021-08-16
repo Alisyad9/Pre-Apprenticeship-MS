@@ -22,3 +22,5 @@ We would ask you to create a colour scheme generator optimised for mobile device
 - You are free to use any kind of set up you like, vanilla JS, react, vue etc.
 - It’s enough to optimise for either iOS or Android depending on what is available to you, but it should be mobile first.
 - At the end please share a Bitbucket or Github repo and if possible, a link to a deployed version, [Firebase](https://firebase.google.com/) is very easy to deploy static sites to.
+
+<img src="./image/myLayout.png" width="400">
