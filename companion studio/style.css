@@ -77,17 +77,6 @@ input {
 
   /* background-color: var(--random-color); */
 }
-.colour1 {
-  background: var(--bgbase);
-
-  /* background-color: var(--bgbase); */
-
-  /* background-color: var(--random-color); */
-}
-/* .colour-box {
-  background-color: none;
-  background-color: var(--bgbase);
-} */
 
 .colour2 {
   background-color: var(--bgbase2);
