@@ -1,0 +1,77 @@
+body {
+  /* width: 100%; */
+
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  /* background-color: rgba(44, 43, 43, 0.8); */
+  border-radius: 0.25em;
+  /* box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25);
+  box-sizing: border-box; */
+  left: 50%;
+  /* min-height: ; */
+  /* padding: 20vmin; */
+  /* position: fixed; */
+  text-align: center;
+  /* top: 50%; */
+  /* transform: translate(-50%, -50%); */
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  height: 80vh;
+}
+
+.colour-box {
+  margin-left: 2px;
+
+  padding: 100px 20px;
+
+  border-radius: 0.25em;
+  margin-left: 2px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+.colour1 {
+  background: #23d5ab;
+}
+.colour2 {
+  background: blue;
+}
+.colour3 {
+  background: black;
+}
+.colour4 {
+  background: crimson;
+}
+.colour5 {
+  background: #d523cc;
+}
+
+@media only screen and (max-width: 590px) {
+  .container {
+    flex-direction: column;
+  }
+  .colour-box {
+    margin: 3px 8px;
+    height: fit-content;
+  }
+}
