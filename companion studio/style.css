@@ -1,7 +1,7 @@
 body {
   /* width: 100%; */
 
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, white, white, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
 }
@@ -16,6 +16,26 @@ body {
   100% {
     background-position: 0% 50%;
   }
+}
+
+/* /////root */
+input {
+  width: 100px;
+}
+
+:root {
+  --base: #ffc600;
+  --base2: black;
+  --base3: pink;
+  --base4: green;
+  --base5: red;
+
+  --bgbase: blue;
+  --bgbase2: purple;
+}
+
+.hl {
+  color: var(--base);
 }
 
 .container {
@@ -51,19 +71,37 @@ body {
   flex-grow: 1;
 }
 .colour1 {
-  background: #23d5ab;
+  background-color: var(--base);
+
+  /* background-color: var(--bgbase); */
+
+  /* background-color: var(--random-color); */
 }
+.colour1 {
+  background: var(--bgbase);
+
+  /* background-color: var(--bgbase); */
+
+  /* background-color: var(--random-color); */
+}
+/* .colour-box {
+  background-color: none;
+  background-color: var(--bgbase);
+} */
+
 .colour2 {
-  background: blue;
+  background-color: var(--bgbase2);
+  /* background-color: var(--base2); */
+  /* background-color: var(--random-color); */
 }
 .colour3 {
-  background: black;
+  background-color: var(--base3);
 }
 .colour4 {
-  background: crimson;
+  background-color: var(--base4);
 }
 .colour5 {
-  background: #d523cc;
+  background-color: var(--base5);
 }
 
 @media only screen and (max-width: 590px) {
