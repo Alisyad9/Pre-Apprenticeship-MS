@@ -2,7 +2,7 @@
 
 const colourtButton = document.querySelectorAll(".container button");
 
-const setBg = (e) => {
+const setBackGround = (e) => {
   const randomColor = Math.floor(Math.random() * 16777215).toString(16);
 
   e.target.parentElement.style.backgroundColor = "#" + randomColor;
@@ -11,7 +11,9 @@ const setBg = (e) => {
   parent.querySelector(".hex-code").innerText = "#" + randomColor;
 };
 
-colourtButton.forEach((button) => button.addEventListener("click", setBg));
+colourtButton.forEach((button) =>
+  button.addEventListener("click", setBackGround)
+);
 
 ///////////////////
 const inputs = document.querySelectorAll(".container input");
