@@ -26,6 +26,11 @@ a {
   color: white;
   text-decoration: none;
 }
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: crimson;
+}
 .hex-code {
   width: 100px;
   padding: 2px;
@@ -54,6 +59,7 @@ a {
   display: flex;
   flex-grow: 1;
   flex-direction: row;
+  height: 80vh;
 }
 
 .colour-box {
@@ -109,6 +115,7 @@ a {
 @media only screen and (max-width: 740px) {
   .container {
     flex-direction: column;
+    height: auto;
   }
   .colour-box {
     margin: 3px 8px;
