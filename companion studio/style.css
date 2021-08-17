@@ -22,20 +22,26 @@ body {
 input {
   width: 100px;
 }
+a {
+  color: white;
+  text-decoration: none;
+}
+.hex-code {
+  width: 100px;
+  padding: 2px;
+  background-color: rgba(255, 255, 255, 0.844);
+  border-radius: 4px;
+  height: 16px;
+  margin-bottom: 2px;
+  border: solid 1px;
+}
 
 :root {
   --base: #ffc600;
-  --base2: black;
+  --base2: rgb(99, 60, 207);
   --base3: pink;
   --base4: green;
   --base5: red;
-
-  --bgbase: blue;
-  --bgbase2: purple;
-}
-
-.hl {
-  color: var(--base);
 }
 
 .container {
@@ -72,16 +78,10 @@ input {
 }
 .colour1 {
   background-color: var(--base);
-
-  /* background-color: var(--bgbase); */
-
-  /* background-color: var(--random-color); */
 }
 
 .colour2 {
-  background-color: var(--bgbase2);
-  /* background-color: var(--base2); */
-  /* background-color: var(--random-color); */
+  background-color: var(--base2);
 }
 .colour3 {
   background-color: var(--base3);
@@ -93,12 +93,34 @@ input {
   background-color: var(--base5);
 }
 
-@media only screen and (max-width: 590px) {
+.share-button {
+  background-color: #0c0a04;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 8px;
+  width: 50px;
+  border-radius: 20px 2px;
+  z-index: 3;
+}
+
+.share-button:hover {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 740px) {
   .container {
     flex-direction: column;
   }
   .colour-box {
     margin: 3px 8px;
     height: fit-content;
+  }
+  .share-button {
+    right: 16px;
   }
 }
