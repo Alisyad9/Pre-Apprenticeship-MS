@@ -119,7 +119,7 @@ h1 {
   }
   .colour-box {
     margin: 3px 8px;
-    height: fit-content;
+    height: auto;
   }
   .share-button {
     right: 16px;
