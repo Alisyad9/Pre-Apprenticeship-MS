@@ -9,9 +9,9 @@ for (let index = 0; index < array.length; index++) {
     biggestValue = element;
   }
 
-  if (element < biggestValue) {
-    biggestValue = element;
+  if (element < smallestValue) {
+    smallestValue = element;
   }
 }
-
 console.log(biggestValue);
+console.log(smallestValue);
