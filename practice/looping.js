@@ -15,3 +15,16 @@ for (let index = 0; index < array.length; index++) {
 }
 console.log(biggestValue);
 console.log(smallestValue);
+
+let nestedArray = [[1], [2], [4]];
+
+for (let index = 0; index < nestedArray.length; index++) {
+  const element = nestedArray[index];
+
+  for (let index = 0; index < element.length; index++) {
+    const result = element[index];
+    console.log(result);
+  }
+
+  console.log(element);
+}
