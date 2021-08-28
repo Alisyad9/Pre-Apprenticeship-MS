@@ -28,3 +28,15 @@ for (let index = 0; index < nestedArray.length; index++) {
 
   console.log(element);
 }
+
+const arrayOfLetters = [["a"], ["b"], ["c"]];
+
+for (let index = 0; index < arrayOfLetters.length; index++) {
+  const element = arrayOfLetters[index];
+  console.log(element);
+
+  for (let index = 0; index < element.length; index++) {
+    const lettersInTheNestedArray = element[index];
+    console.log(lettersInTheNestedArray);
+  }
+}
