@@ -29,7 +29,7 @@ for (let index = 0; index < nestedArray.length; index++) {
   console.log(element);
 }
 
-const arrayOfLetters = [["a"], ["b"], ["c"]];
+const arrayOfLetters = [[[1]], [2], [3]];
 
 for (let index = 0; index < arrayOfLetters.length; index++) {
   const element = arrayOfLetters[index];
@@ -40,3 +40,5 @@ for (let index = 0; index < arrayOfLetters.length; index++) {
     console.log(lettersInTheNestedArray);
   }
 }
+
+arrayOfLetters.flatMap((element) => console.log(element * 2));
