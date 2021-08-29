@@ -29,18 +29,23 @@ for (let index = 0; index < nestedArray.length; index++) {
   console.log(element);
 }
 
-const arrayOfNumbers = [2, [[1]], [2], [3]];
+const arrayOfNumbers = [2, [[[1]]], [2], [3]];
 
-for (let index = 0; index < arrayOfLetters.length; index++) {
-  const element = arrayOfLetters[index];
-  console.log(element);
+// for (let index = 0; index < arrayOfLetters.length; index++) {
+//   const element = arrayOfLetters[index];
+//   console.log(element);
 
-  for (let index = 0; index < element.length; index++) {
-    const lettersInTheNestedArray = element[index];
-    console.log(lettersInTheNestedArray);
-  }
-}
+//   for (let index = 0; index < element.length; index++) {
+//     const lettersInTheNestedArray = element[index];
+//     console.log(lettersInTheNestedArray);
+//   }
+// }
 
-console.log(arrayOfNumber.flat(Infinity));
+console.log(arrayOfNumbers.flat());
 
-arrayOfLetters.flatMap((element) => console.log(element * 2));
+const flattenedArray = (arrayOfNumbers) =>
+  console.log([].concat(...arrayOfNumbers));
+
+console.log(flattenedArray);
+
+// arrayOfLetters.flatMap((element) => console.log(element * 2));
