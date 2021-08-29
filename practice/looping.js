@@ -43,6 +43,7 @@ const arrayOfNumbers = [2, [[[1]]], [2], [3]];
 
 console.log(arrayOfNumbers.flat());
 
+console.log([].concat(...arrayOfNumbers.flat(1)));
 const flattenedArray = (arrayOfNumbers) =>
   console.log([].concat(...arrayOfNumbers));
 
