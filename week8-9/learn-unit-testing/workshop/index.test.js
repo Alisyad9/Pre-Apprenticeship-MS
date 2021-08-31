@@ -4,4 +4,9 @@ test("makeUrl", () => {
   equal(makeUrl("hitmonle"), "https://pokeapi.co/api/v2/hitmonlee");
 });
 
-test("searchParamsToObject");
+test("searchParamsToObject", () => {
+  let trueValue = searchParamsToObject("name=oliver&email=hello@oliverjam.com");
+  console.log(trueValue);
+  let expectedValue = { name: "oliver", email: "hello@oliverjam.com" };
+  equal(trueValue.name, expectedValue.name);
+});
