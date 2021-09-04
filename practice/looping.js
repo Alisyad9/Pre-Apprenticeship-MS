@@ -7,6 +7,10 @@ array.forEach((element) => {
   console.log(element);
 });
 
+array.map((element) => console.log(element));
+
+array.filter((element) => element > 0);
+
 for (const iterator of array) {
   console.log(iterator);
 }
