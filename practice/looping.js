@@ -31,15 +31,15 @@ for (let index = 0; index < nestedArray.length; index++) {
 
 const arrayOfNumbers = [2, , , [[[1]]], [2], [3]];
 
-// for (let index = 0; index < arrayOfLetters.length; index++) {
-//   const element = arrayOfLetters[index];
-//   console.log(element);
+for (let index = 0; index < arrayOfLetters.length; index++) {
+  const element = arrayOfLetters[index];
+  console.log(element);
 
-//   for (let index = 0; index < element.length; index++) {
-//     const lettersInTheNestedArray = element[index];
-//     console.log(lettersInTheNestedArray);
-//   }
-// }
+  for (let index = 0; index < element.length; index++) {
+    const lettersInTheNestedArray = element[index];
+    console.log(lettersInTheNestedArray);
+  }
+}
 
 for (const iterator of arrayOfNumbers) {
   console.log(iterator);
