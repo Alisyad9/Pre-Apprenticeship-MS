@@ -9,7 +9,9 @@ array.forEach((element) => {
 
 array.map((element) => console.log(element));
 
-array.filter((element) => element > 0);
+const result = array.filter((element) => element > 0);
+
+console.log(result);
 
 for (const iterator of array) {
   console.log(iterator);
