@@ -1,17 +1,17 @@
-let array = [1, -2, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let array = [1, -2, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-biggestValue = 0;
-smallestValue = Infinity;
+// biggestValue = 0;
+// smallestValue = Infinity;
 
-array.forEach((element) => {
-  console.log(element);
-});
+// array.forEach((element) => {
+//   console.log(element);
+// });
 
-array.map((element) => console.log(element));
+// array.map((element) => console.log(element));
 
-const result = array.filter((element) => element > 0);
+// const result = array.filter((element) => element > 0);
 
-console.log(result);
+// console.log(result);
 
 for (const iterator of array) {
   console.log(iterator);
