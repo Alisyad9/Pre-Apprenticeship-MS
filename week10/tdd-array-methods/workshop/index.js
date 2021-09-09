@@ -3,6 +3,9 @@
 // }
 
 function map(array, fn) {
+  if (Array.isArray(array)) return "is not an array";
+
+  console.log(Array.isArray(array));
   const newArray = [];
   for (let i = 0; i < array.length; i++) {
     const el = array[i];
