@@ -15,3 +15,5 @@ function namesInObject(arrayOfcarnames) {
 }
 
 namesInObject(car);
+
+console.log( names.person2 );
