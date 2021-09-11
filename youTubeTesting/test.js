@@ -17,3 +17,4 @@ function namesInObject(arrayOfcarnames) {
 namesInObject(car);
 
 console.log( names.person2 );
+console.log( people.person1 );
