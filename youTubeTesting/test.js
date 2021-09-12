@@ -1,7 +1,7 @@
-const names ={
-    person1='james',
-    person2='ale'
-};
+// const names ={
+//     person1='james',
+//     person2='ale'
+// };
 const car = { type: "Fiat", model: "500", color: "white" };
 const people = ["james", "ali", "john"];
 function namesInObject(arrayOfcarnames) {
@@ -16,5 +16,5 @@ function namesInObject(arrayOfcarnames) {
 
 namesInObject(car);
 
-console.log( names.person2 );
-console.log( people.person1 );
+console.log(names.person2);
+console.log(people.person1);
