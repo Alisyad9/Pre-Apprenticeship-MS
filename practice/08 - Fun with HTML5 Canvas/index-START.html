@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML5 Canvas</title>
+  </head>
+  <body>
+    <canvas id="draw" width="800" height="800"></canvas>
+    <script>
+      // const newCanvas = document.getElementById("draw");
+
+      // const ctx = Canvas.getContext("2d");
+      // newCanvas.width = Window.innerWidth;
+      // NewCanvas.height = Window.innerHeight;
+
+      // ctx.strokeStyle = "#BADA55";
+      // ctx.linejoin = "round";
+      // ctx.lineCap = "round";
+
+      // let isDrawing = false;
+
+      const newCanvas = document.getElementById("draw");
+      const ctx = newCanvas.getContext("2d");
+      newCanvas.width = window.innerWidth;
+      newCanvas.height = window.innerHeight;
+      ctx.strokeStyle = "#BADA55";
+      ctx.lineJoin = "miter";
+      ctx.lineCap = "round";
+      ctx.lineWidth = 30;
+
+      let isDrawing = false;
+      let lastX = 0;
+      let lastY = 0;
+      let hue = 0;
+
+      function draw(e) {
+        // if (!isDrawing) return;
+
+        ctx.strokeStyle = `hsl(${hue}, 50%,50%)`;
+
+        ctx.lineWidth = hue;
+        hue++;
+
+        if (hue > 500) {
+          hue = 0;
+        }
+        if (!isDrawing) return;
+
+        console.log(e);
+        ctx.beginPath();
+        ctx.moveTo(lastX, lastY);
+        ctx.lineTo(e.offsetX, e.offsetY);
+        ctx.stroke();
+
+        // lastX = e.offsetX;
+        // lastY = e.offsetY;
+        [lastX, lastY] = [e.offsetX, e.offsetY];
+      }
+
+      newCanvas.addEventListener("mousedown", (e) => {
+        isDrawing = true;
+        [lastX, lastY] = [e.offsetX, e.offsetY];
+      });
+
+      newCanvas.addEventListener("mousemove", draw);
+
+      newCanvas.addEventListener("mouseup", () => (isDrawing = false));
+      newCanvas.addEventListener("mouseout", () => (isDrawing = false));
+    </script>
+
+    <style>
+      html,
+      body {
+        margin: 0;
+      }
+    </style>
+  </body>
+</html>
